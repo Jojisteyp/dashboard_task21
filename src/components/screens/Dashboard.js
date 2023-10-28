@@ -105,7 +105,8 @@ const styles =StyleSheet.create({
   bord:{
     fontFamily:"OpenSans",
     fontSize:24,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    color:'#000'
 },
 
   icon:{
