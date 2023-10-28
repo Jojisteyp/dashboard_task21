@@ -7,9 +7,8 @@ import Completed from "../../assets/icons/Frame 2.svg"
 import Bar from "../../assets/icons/Property 1=Variant20.svg"
 import Arrow from "../../assets/icons/arrow.svg"
 import Graph from "../../assets/icons/graph.svg"
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 
-export default function Dashboard() {
+export default function Dashboard({navigation}) {
   return (
     <View style={styles.container}>
 
@@ -24,13 +23,13 @@ export default function Dashboard() {
       </View>
 
       <View>
-        <Text style={{fontSize:28,fontWeight:'500',marginBottom:6}}>
+        <Text style={{fontSize:28,fontWeight:'500',marginBottom:6, color:'#000' }}>
           Project Summary</Text>
         <Text style={{fontSize:17, opacity: 0.6,fontWeight:'500',}}>
           Let's finish your project for today!
         </Text>
         <View style={styles.prj}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() =>navigation.navigate('Project')}>
             <Project/>
           </TouchableOpacity>
           <TouchableOpacity>
@@ -72,7 +71,7 @@ export default function Dashboard() {
             </View>
           </View>
         </View>
-        <View>
+        <View style={{paddingVertical:10}}>
           <View><Text>Total Task Activity</Text></View>
           <View style={styles.LastView}>
             <Text style={styles.hour}>125 Task  </Text>

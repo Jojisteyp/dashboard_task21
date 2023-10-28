@@ -10,14 +10,14 @@ import Pused from "../../assets/icons/Property 1=stop.svg"
 
 
 
-export default function Project() {
+export default function Project({navigation}) {
   return (
     <View style={styles.container}>
 
     {/* Header section ==> */}
 
       <View style={styles.header}>
-        <TouchableOpacity style={styles.icon}>
+        <TouchableOpacity style={styles.icon} onPress={()=>navigation.goBack()}>
           <Back  style={{transform: [{rotate: '90deg'}]}}/>
         </TouchableOpacity>
         <Text style={styles.bord} >Projects</Text>
@@ -39,8 +39,8 @@ export default function Project() {
       <ScrollView>
         {/* Lists ===> */}
 
-        <View style={styles.mainList}>
-          <View style={styles.top}>
+        <TouchableOpacity style={styles.mainList} onPress={() =>navigation.navigate('Task')}>
+          <View style={styles.top} >
               <View  style={{flexDirection:'row',backgroundColor:'#ED6B42',width:170,padding:5}}>
                   <Play/>
                   <Text style={{fontSize:15,color:'#fff'}}> Project in Progress</Text>
@@ -66,7 +66,7 @@ export default function Project() {
             </View>
             <Text>75%</Text>
           </View>
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.mainList}>
           <View style={styles.top}>
