@@ -23,9 +23,9 @@ export default function Dashboard({navigation}) {
       </View>
 
       <View>
-        <Text style={{fontSize:28,fontWeight:'500',marginBottom:6, color:'#000' }}>
+        <Text style={styles.Mainhead}>
           Project Summary</Text>
-        <Text style={{fontSize:17, opacity: 0.6,fontWeight:'500',}}>
+        <Text style={styles.p}>
           Let's finish your project for today!
         </Text>
         <View style={styles.prj}>
@@ -88,21 +88,31 @@ export default function Dashboard({navigation}) {
   )
 }
 const styles =StyleSheet.create({
-  container:{
-    paddingHorizontal:18,
-    paddingVertical:10
-  },
+container:{
+  paddingHorizontal:18,
+  paddingVertical:10
+},
 
-  header:{
-    justifyContent:'space-between',
-    flexDirection: 'row',
-    paddingTop:25,
-    marginBottom:30
+header:{
+  justifyContent:'space-between',
+  flexDirection: 'row',
+  paddingTop:25,
+  marginBottom:30
  
+},
+Mainhead:{
+  fontSize:28,
+  fontWeight:'500',
+  marginBottom:6,
+   color:'#000'
+},
+  p:{
+    fontSize:17,
+    opacity: 0.6,
+    fontWeight:'500'
 },
 
   bord:{
-    fontFamily:"OpenSans",
     fontSize:24,
     fontWeight:'bold',
     color:'#000'
@@ -143,26 +153,31 @@ const styles =StyleSheet.create({
   grp:{
     fontWeight:'bold'
   },
+
   graphview:{
     flexDirection:'row',
     justifyContent:'space-between',
     paddingHorizontal:25
   },
+
   LastView:{
     flexDirection:'row',
     justifyContent:'space-between',
     paddingVertical:10
   },
+
   Last:{
     backgroundColor:'#ED6B42',
     flexDirection:'row',
     padding:2
   },
+
   Last2:{
     flexDirection:'row',
     padding:2,
     backgroundColor:'#009CBC'
   },
+
   lastView:{
     flexDirection:'row',
     justifyContent:'space-between',

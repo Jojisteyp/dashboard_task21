@@ -1,5 +1,6 @@
 import { View,Image, Text,StyleSheet ,TouchableOpacity,ScrollView} from 'react-native'
 import React from 'react'
+import ReadMore from 'react-native-read-more-text';
 
 import Back from '../../assets/icons/Property 1=Variant24.svg'
 import Search from '../../assets/icons/Search.svg'
@@ -26,132 +27,143 @@ export default function TaskDetails({navigation}) {
       </View>
       {/* <=== Header section Ends  */}
       <ScrollView>
-      <View style={styles.MainScroll}>
-        <View style={styles.top} >
-            <View  style={{flexDirection:'row',backgroundColor:'#ED6B42',width:180,padding:5,marginBottom:12}}>
-              <Play/>
-              <Text style={{fontSize:15,color:'#fff',}}> Projects in Progress</Text>
+          <View style={styles.MainScroll}>
+            <View style={styles.top} >
+                <View  style={{flexDirection:'row',backgroundColor:'#ED6B42',width:180,padding:5,marginBottom:12}}>
+                  <Play/>
+                  <Text style={{fontSize:15,color:'#fff',}}> Projects in Progress</Text>
+                </View>
             </View>
-        </View>
-        <Text style={{paddingVertical:13, fontSize:27,fontWeight:'600',color:'#000'}}>Tasktion-Project</Text>
-        <Text style={{ fontSize:28,fontWeight:'600',color:'#000',paddingBottom:30}}>Management Dashboard</Text>
-        <Text style={styles.des}>Description</Text>
-        <Text style={styles.des} >
-          This project has a task management theme for a dashboard  or web app platform.Here there is a complete breif along with the...</Text>
-        <View style={styles.Middle}>
+            <Text style={{paddingVertical:13, fontSize:27,fontWeight:'600',color:'#000'}}>Tasktion-Project</Text>
+            <Text style={{ fontSize:28,fontWeight:'600',color:'#000',paddingBottom:30}}>Management Dashboard</Text>
+            <Text style={styles.des}>Description</Text>
+            <View style={styles.des}>
+              <ReadMore
+                numberOfLines={2}
+                >
+                <Text style={styles.Textmem}>
+                This project has a task management theme for a dashboard
+                  or web app platform.Here there is a complete breif along
+                  with the ideas.Collaborate with team members in the Team 
+                  Member Dashboard and My Work work area on tasks that you created, 
+                  on which you're a resource, and tasks that you follow....
+                </Text>
+              </ReadMore >
+            </View>
+            <View style={styles.Middle}>
+              <View>
+                <Text style={styles.Textmem}>Team member</Text>
+                <View style={styles.Members}>
+                  <View style={styles.Mainmem}>
+                    <Image  style={styles.MemPic}
+                      source={require("../../assets/images/person3.png")}
+                    />
+                  </View>
+                  <View  style={styles.Mainmem}>
+                    <Image  style={styles.MemPic}
+                      source={require("../../assets/images/person2.png")}
+                    />
+                  </View>
+                  <View style={styles.Mainmem} >
+                    <Image  style={styles.MemPic}
+                      source={require("../../assets/images/person1.png")}
+                    />
+                  </View>
+                  <View  style={styles.Mainmem}>
+                    <Image  style={styles.MemPic}
+                      source={require("../../assets/images/person4.png")}
+                    />
+                  </View>
+                </View>
+              </View>
+              <View>
+                <Text  style={styles.Textmem}>Due date</Text>
+                <Text style={{fontSize:20,fontWeight:600,color:"#000"}}>Sept 24, 2022</Text>
+              </View>
+            </View>
+          </View>
+
           <View>
-            <Text style={styles.Textmem}>Team member</Text>
-            <View style={styles.Members}>
-              <View style={styles.Mainmem}>
-                <Image  style={styles.MemPic}
-                  source={require("../../assets/images/person3.png")}
-                 />
-              </View>
-              <View  style={styles.Mainmem}>
-                <Image  style={styles.MemPic}
-                  source={require("../../assets/images/person2.png")}
-                 />
-              </View>
-              <View style={styles.Mainmem} >
-                <Image  style={styles.MemPic}
-                  source={require("../../assets/images/person1.png")}
-                 />
-              </View>
-              <View  style={styles.Mainmem}>
-                <Image  style={styles.MemPic}
-                  source={require("../../assets/images/person4.png")}
-                 />
+            <View style={styles.BottonHeader}>
+              <Text style={{fontSize:21,fontWeight:500,color:"#000"}}>Tasks</Text>
+              <Bar/>
+            </View>
+            <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
+              <View style={styles.SubContainer}>
+                <View style={{flexDirection:'row'}}>
+                  <Tick/>
+                  <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  Style Guide & Component</Text>
+                </View>
+                  <View style={styles.middle}>
+                    <View style={{flexDirection:'row'}}>
+                      <Comment/>
+                      <Text>  16 Comment</Text>
+                    </View>
+                    <View style={{flexDirection:'row'}}>
+                      <Doc/>
+                      <Text>  2 Document</Text>
+                    </View>
+                  </View>
               </View>
             </View>
-          </View>
-          <View>
-            <Text  style={styles.Textmem}>Due date</Text>
-            <Text style={{fontSize:20,fontWeight:600,color:"#000"}}>Sept 24, 2022</Text>
-          </View>
-        </View>
-      </View>
 
-      <View>
-        <View style={styles.BottonHeader}>
-          <Text style={{fontSize:21,fontWeight:500,color:"#000"}}>Tasks</Text>
-          <Bar/>
-        </View>
-        <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
-          <View style={styles.SubContainer}>
-            <View style={{flexDirection:'row'}}>
-              <Tick/>
-              <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  Style Guide & Component</Text>
-            </View>
-              <View style={styles.middle}>
+            <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
+              <View style={styles.SubContainer}>
                 <View style={{flexDirection:'row'}}>
-                  <Comment/>
-                  <Text>  16 Comment</Text>
+                  <Tick/>
+                  <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  Wireframing & Sketch</Text>
                 </View>
-                <View style={{flexDirection:'row'}}>
-                  <Doc/>
-                  <Text>  2 Document</Text>
-                </View>
+                  <View style={styles.middle}>
+                    <View style={{flexDirection:'row'}}>
+                      <Comment/>
+                      <Text>  16 Comment</Text>
+                    </View>
+                    <View style={{flexDirection:'row'}}>
+                      <Doc/>
+                      <Text>  2 Document</Text>
+                    </View>
+                  </View>
               </View>
-          </View>
-        </View>
+            </View>
 
-        <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
-          <View style={styles.SubContainer}>
-            <View style={{flexDirection:'row'}}>
-              <Tick/>
-              <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  Wireframing & Sketch</Text>
-            </View>
-              <View style={styles.middle}>
+            <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
+              <View style={styles.SubContainer}>
                 <View style={{flexDirection:'row'}}>
-                  <Comment/>
-                  <Text>  16 Comment</Text>
+                  <Tick/>
+                  <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  UI design & Prototype</Text>
                 </View>
-                <View style={{flexDirection:'row'}}>
-                  <Doc/>
-                  <Text>  2 Document</Text>
-                </View>
+                  <View style={styles.middle}>
+                    <View style={{flexDirection:'row'}}>
+                      <Comment/>
+                      <Text>  16 Comment</Text>
+                    </View>
+                    <View style={{flexDirection:'row'}}>
+                      <Doc/>
+                      <Text>  2 Document</Text>
+                    </View>
+                  </View>
               </View>
-          </View>
-        </View>
-
-        <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
-          <View style={styles.SubContainer}>
-            <View style={{flexDirection:'row'}}>
-              <Tick/>
-              <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  UI design & Prototype</Text>
             </View>
-              <View style={styles.middle}>
+            <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
+              <View style={styles.SubContainer}>
                 <View style={{flexDirection:'row'}}>
-                  <Comment/>
-                  <Text>  16 Comment</Text>
+                  <Tick/>
+                  <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  Style Guide & Component</Text>
                 </View>
-                <View style={{flexDirection:'row'}}>
-                  <Doc/>
-                  <Text>  2 Document</Text>
-                </View>
+                  <View style={styles.middle}>
+                    <View style={{flexDirection:'row'}}>
+                      <Comment/>
+                      <Text>  16 Comment</Text>
+                    </View>
+                    <View style={{flexDirection:'row'}}>
+                      <Doc/>
+                      <Text>  2 Document</Text>
+                    </View>
+                  </View>
               </View>
-          </View>
-        </View>
-        <View style={{paddingHorizontal:20 ,paddingVertical:14,}}>
-          <View style={styles.SubContainer}>
-            <View style={{flexDirection:'row'}}>
-              <Tick/>
-              <Text style={{fontSize:20,fontWeight:500,color:'#002'}}>  Style Guide & Component</Text>
             </View>
-              <View style={styles.middle}>
-                <View style={{flexDirection:'row'}}>
-                  <Comment/>
-                  <Text>  16 Comment</Text>
-                </View>
-                <View style={{flexDirection:'row'}}>
-                  <Doc/>
-                  <Text>  2 Document</Text>
-                </View>
-              </View>
           </View>
-        </View>
-      </View>
-     </ScrollView>
+      </ScrollView>
     </View>
   )
 }
@@ -216,6 +228,7 @@ top:{
     paddingVertical:10,
     fontSize:16
   },
+
   Mainmem:{
     borderWidth:2 ,
     borderRadius:30,

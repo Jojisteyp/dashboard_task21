@@ -41,7 +41,7 @@ export default function Project({navigation}) {
 
         <TouchableOpacity style={styles.mainList} onPress={() =>navigation.navigate('Task')}>
           <View style={styles.top} >
-              <View  style={{flexDirection:'row',backgroundColor:'#ED6B42',width:170,padding:5}}>
+              <View  style={styles.ListCon1}>
                   <Play/>
                   <Text style={{fontSize:15,color:'#fff'}}> Project in Progress</Text>
               </View>
@@ -60,7 +60,7 @@ export default function Project({navigation}) {
               <Text>  26 Document</Text>
             </View>
           </View>
-          <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+          <View style={styles.bottomline}>
             <View style={styles.bottom}>
               <View style={styles.length1}></View>
             </View>
@@ -70,7 +70,7 @@ export default function Project({navigation}) {
 
         <View style={styles.mainList}>
           <View style={styles.top}>
-              <View  style={{flexDirection:'row',backgroundColor:'#009CBC',width:170,padding:5}}>
+              <View  style={styles.ListCon}>
                   <Pused/>
                   <Text style={{fontSize:15,color:'#fff'}}> Projects in Paused</Text>
               </View>
@@ -89,7 +89,7 @@ export default function Project({navigation}) {
               <Text>  26 Document</Text>
             </View>
           </View>
-          <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+          <View style={styles.bottomline}>
             <View style={styles.bottom}>
               <View style={styles.length}></View>
             </View>
@@ -99,7 +99,7 @@ export default function Project({navigation}) {
 
         <View style={styles.mainList}>
           <View style={styles.top}>
-              <View  style={{flexDirection:'row',backgroundColor:'#009CBC',width:170,padding:5}}>
+              <View  style={styles.ListCon}>
                   <Pused/>
                   <Text style={{fontSize:15,color:'#fff'}}> Projects in Paused</Text>
               </View>
@@ -118,7 +118,7 @@ export default function Project({navigation}) {
               <Text>  26 Document</Text>
             </View>
           </View>
-          <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+          <View style={styles.bottomline}>
             <View style={styles.bottom}>
               <View style={styles.length}></View>
             </View>
@@ -128,7 +128,7 @@ export default function Project({navigation}) {
 
         <View style={styles.mainList}>
           <View style={styles.top}>
-              <View  style={{flexDirection:'row',backgroundColor:'#009CBC',width:170,padding:5}}>
+              <View  style={styles.ListCon}>
                   <Pused/>
                   <Text style={{fontSize:15,color:'#fff'}}> Project in Progress</Text>
               </View>
@@ -147,7 +147,7 @@ export default function Project({navigation}) {
               <Text>  26 Document</Text>
             </View>
           </View>
-          <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+          <View style={styles.bottomline}>
             <View style={styles.bottom}>
               <View style={styles.length}></View>
             </View>
@@ -217,6 +217,16 @@ const styles =StyleSheet.create({
     marginVertical:15,
     backgroundColor:'#fff'
   },
+  ListCon:{
+    flexDirection:'row',
+    backgroundColor:'#009CBC',
+    width:170,padding:5
+  },
+  ListCon1:{
+    flexDirection:'row',
+    backgroundColor:'#ED6B42',
+    width:170,padding:5
+  },
   middle:{
     flexDirection:'row',
     justifyContent:'space-between',
@@ -230,6 +240,9 @@ const styles =StyleSheet.create({
     borderRadius:10,
     marginVertical:10,
     position:'relative'
+  },
+  bottomline:{
+    flexDirection:'row',justifyContent:'space-between'
   },
   length:{
     position:'absolute',
