@@ -6,7 +6,7 @@ import Play from '../../assets/icons/Property 1=Variant21.svg'
 import Bar from "../../assets/icons/Property 1=Variant20.svg"
 import Comment from "../../assets/icons/comment.svg"
 import Doc from "../../assets/icons/document.svg"
-import Pused from "../../assets/icons/Property 1=stop.svg"
+import Pused from "../../assets/icons/Property 1=Variant19.svg"
 
 
 
@@ -169,7 +169,7 @@ const styles =StyleSheet.create({
   header:{
     justifyContent:'space-between',
     flexDirection: 'row',
-    paddingTop:30,
+    paddingTop:25,
     marginBottom:30
    
   },
@@ -190,7 +190,7 @@ const styles =StyleSheet.create({
     Head:{
       flexDirection:'row',
       justifyContent:'space-between',
-      backgroundColor:'#9a9a9a',
+      backgroundColor:'#E2E5DE',
       marginBottom:30
       
  },
@@ -225,7 +225,7 @@ const styles =StyleSheet.create({
   },
   bottom:{
     width:260,
-    backgroundColor:'grey',
+    backgroundColor:'#E2E5DE',
     padding:6,
     borderRadius:10,
     marginVertical:10,
